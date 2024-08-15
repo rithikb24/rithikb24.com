@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rithik Bhandari</title>
+    <title>Blog Posts</title>
     <style>
         body {
             font-family: 'Courier New', monospace;
@@ -13,9 +13,6 @@
             margin: 0 auto;
             padding: 20px;
             background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
         header {
             text-align: center;
@@ -25,7 +22,6 @@
         }
         h1 {
             font-size: 2.5em;
-            margin-bottom: 10px;
         }
         nav {
             margin-top: 20px;
@@ -42,33 +38,34 @@
             background-color: #333;
             color: #f0f0f0;
         }
-        main {
-            text-align: center;
-            flex-grow: 1;
+        .post-list {
+            list-style-type: none;
+            padding: 0;
         }
-        footer {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            margin-top: 20px;
+        .post-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #333;
+            padding: 10px 0;
         }
-        .social-links {
-            margin-bottom: 10px;
+        .post-date {
+            min-width: 100px;
         }
-        .social-links a {
+        .post-title {
+            text-align: right;
+        }
+        .post-title a {
             color: #333;
             text-decoration: none;
-            margin: 0 10px;
         }
-        .social-links a:hover {
+        .post-title a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Rithik Bhandari</h1>
-        <p>Welcome to my personal website</p>
+        <h1>Blog Posts</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="posts.html">Posts</a>
@@ -79,17 +76,13 @@
         </nav>
     </header>
     <main>
-        <p>Hi, this is a work in progress! Feel free to explore anyways.</p>
-        <p>I am currently working as a DevOps Engineer at  <a href="https://www.smallcase.com">smallcase</a></p>
+        <ul class="post-list">
+            <li class="post-item">
+                <span class="post-date">2024-08-15</span>
+                <span class="post-title"><a href="do-I-understand-DNS-part-1.html">do I really understand DNS part 1</a></span>
+            </li>
+            <!-- Add more list items for additional blog posts -->
+        </ul>
     </main>
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/rithikb24" target="_blank">Github</a>
-            <a href="https://x.com/__rithik_" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/in/rithikbhandari" target="_blank">Linkedin</a>
-            <a href="https://www.last.fm/user/rithikb24" target="_blank">Music</a>
-        </div>
-        <div>© 2024 Rithik Bhandari</div>
-    </footer>
 </body>
 </html>

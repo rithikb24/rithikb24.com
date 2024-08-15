@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rithik Bhandari</title>
+    <title>Now - Current Interests and Focus</title>
     <style>
         body {
             font-family: 'Courier New', monospace;
@@ -13,9 +13,6 @@
             margin: 0 auto;
             padding: 20px;
             background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
         header {
             text-align: center;
@@ -25,7 +22,6 @@
         }
         h1 {
             font-size: 2.5em;
-            margin-bottom: 10px;
         }
         nav {
             margin-top: 20px;
@@ -42,33 +38,23 @@
             background-color: #333;
             color: #f0f0f0;
         }
-        main {
-            text-align: center;
-            flex-grow: 1;
+        .now-content {
+            text-align: justify;
         }
-        footer {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            margin-top: 20px;
+        .now-content h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
         }
-        .social-links {
-            margin-bottom: 10px;
-        }
-        .social-links a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .social-links a:hover {
-            text-decoration: underline;
+        .update-date {
+            text-align: right;
+            font-style: italic;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Rithik Bhandari</h1>
-        <p>Welcome to my personal website</p>
+        <h1>Now</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="posts.html">Posts</a>
@@ -78,18 +64,32 @@
             <!-- <a href="travel.html">Travel</a> -->
         </nav>
     </header>
-    <main>
-        <p>Hi, this is a work in progress! Feel free to explore anyways.</p>
-        <p>I am currently working as a DevOps Engineer at  <a href="https://www.smallcase.com">smallcase</a></p>
+    <main class="now-content">
+        <h2>Current Interests and Focus</h2>
+        <p>This is my "now" page, where I share what I'm currently interested in and focusing on. It's a snapshot of my life and work at this moment in time.</p>
+
+        <h3>What I'm Learning</h3>
+        <ul>
+            <li>relearning data structures</li>
+            <li>golang with gophercies</li>
+        </ul>
+
+        <h3>Current Projects</h3>
+        <ul>
+            <li>this website for now!</li>
+        </ul>
+
+        <h3>Books I'm Reading</h3>
+        <ul>
+            <li>"How to live" by Derek Sivers</li>
+        </ul>
+<!-- 
+        <h3>Personal Goals</h3>
+        <p></p> -->
+
+        <p>This page is inspired by <a href="https://nownownow.com/about">Derek Sivers' now page movement</a>. It's a place for me to share my current focus and for you to get a sense of what I'm up to these days.</p>
+
+        <p class="update-date">Last updated: August 15, 2024</p>
     </main>
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/rithikb24" target="_blank">Github</a>
-            <a href="https://x.com/__rithik_" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/in/rithikbhandari" target="_blank">Linkedin</a>
-            <a href="https://www.last.fm/user/rithikb24" target="_blank">Music</a>
-        </div>
-        <div>© 2024 Rithik Bhandari</div>
-    </footer>
 </body>
 </html>
