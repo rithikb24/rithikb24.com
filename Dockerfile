@@ -1,8 +1,26 @@
-# Use the official Nginx image as the base image
-FROM nginx
+# Use the official Rust image as the base image
+FROM rust:latest as builder
 
-# Copy all files from the current directory into the container
-COPY . /usr/share/nginx/html/
+# Install Zola
+RUN cargo install zola
 
-# The default port Nginx listens on is 80, so we need to expose that port
-EXPOSE 80
+# Create a new stage with a minimal image
+FROM debian:buster-slim
+
+# Copy Zola binary from the builder stage
+COPY --from=builder /usr/local/cargo/bin/zola /usr/local/bin/zola
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the content of the local directory to the working directory
+COPY . .
+
+# Build the Zola site
+RUN zola build
+
+# Expose port 8080
+EXPOSE 8080
+
+# Command to run the application
+CMD ["zola", "serve", "--interface", "0.0.0.0", "--port", "8080"]
