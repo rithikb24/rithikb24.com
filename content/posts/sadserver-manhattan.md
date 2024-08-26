@@ -1,5 +1,5 @@
 +++
-title = "Scenario: "Manhattan": can't write data into database"
+title = "Scenario: Manhattan: can't write data into database"
 date = "2024-06-27"
 +++
 
